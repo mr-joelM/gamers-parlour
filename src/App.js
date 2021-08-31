@@ -1,24 +1,40 @@
+import {Switch, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import Reviews from "./components/Reviews";
+import RevByCat from "./components/RevByCat";
+import SingleRev from "./components/SingleRev";
+import RevComments from "./components/RevComments";
+import AddComment from "./components/AddComment";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Header />
+      <Switch>
+        <Route exact path="/reviews">
+          <Reviews />
+        </Route>
+        <Route exact path="/categories">
+          <RevByCat />
+        </Route>
+        <Route exact path="/singleRev">
+          <SingleRev />
+        </Route>
+        <Route exact path="/reviewComments">
+          <RevComments />
+        </Route>
+        <Route exact path="/reviewComments">
+          <AddComment />
+        </Route>
+        <Route>
+          <p>404. Not Found</p>
+        </Route>
+      </Switch>
+    <div>
   );
 }
 
