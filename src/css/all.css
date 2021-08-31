@@ -3,7 +3,15 @@
   border-color: rgb(55, 0, 255);
   border-width: 5px;
   border-style: solid;
-  min-height: 100vh;
+  height: 150px;
+}
+
+.header_nav {
+  text-align: center;
+  border-color: gold;
+  border-width: 5px;
+  border-style: solid;
+  height: 50px;
 }
 
 .allreviews {
@@ -44,4 +52,9 @@
   border-width: 5px;
   border-style: solid;
   min-height: 100vh;
+}
+
+.review_list_img,
+.review_img {
+  width: 250px;
 }

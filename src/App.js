@@ -19,13 +19,13 @@ function App() {
         <Route exact path="/categories">
           <RevByCat />
         </Route>
-        <Route exact path="/singleRev">
+        <Route exact path="/review/:review_id">
           <SingleRev />
         </Route>
-        <Route exact path="/reviewComments">
+        <Route exact path="/review/:review_id/comments">
           <RevComments />
         </Route>
-        <Route exact path="/addComment">
+        <Route exact path="/review/:review_id/addComment">
           <AddComment />
         </Route>
         <Route>

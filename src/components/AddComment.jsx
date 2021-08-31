@@ -1,5 +1,5 @@
 import React from 'react';
-import "../css/all";
+import "../css/all.css";
 
 const AddComment = () => {
     return (

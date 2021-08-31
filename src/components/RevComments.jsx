@@ -1,31 +1,36 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
+import { useParams } from "react-router-dom"; 
 import { Link } from 'react-router-dom'; 
-import "../css/all";
+import "../css/all.css";
 
 const RevComments = () => {
+    const [revComments, setRevComments] = useState([])
+    const { review_id } = useParams(); 
+
+    useEffect(()=>{
+        fetch(`http://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments` )
+        .then((response)=>{return response.json()})
+        .then((data)=>{setRevComments(data.comments)})
+    },[])
+
+    console.log(revComments)
+
     return (
         <form className="revCom">
             <h1>this is the Review comments page!</h1>
             <ul>
-                <li>
-                    <h2>Author: jessjelly</h2>
-                    <h3>Posted: </h3>
-                    <h3>Votes: 3</h3>
-                    <h3>Body: "Quis duis mollit ad enim deserunt."</h3>
-                </li>
-                <li>
-                    <h2>Author: cooljmessy</h2>
-                    <h3>Posted: </h3>
-                    <h3>Votes: 25</h3>
-                    <h3>Body: "Laboris nostrud ea ex occaecat aute quis consectetur anim."</h3>
-                </li>
-                <li>
-                    <h2>Author: weegembump</h2>
-                    <h3>Posted: </h3>
-                    <h3>Votes: 7</h3>
-                    <h3>Body: "Consequat nisi dolor nulla esse sunt eu ipsum laborum deserunt duis. Ffugiat sint et proident ex do consequat est. Nisi minim laboris mollit cupidatat?"</h3>
-                </li>
-                <Link to ='/addComment'><h3>Add a comment</h3></Link>
+                {revComments.map((comment)=>{
+                    return(
+                        <form>
+                            <li className='rev_com_list' key={comment.comment_id}>
+                                <h3>"{comment.body}"</h3>                                
+                                <h4>Made by: {comment.author}</h4>
+                                <h4>Posted on: {comment.created_at}</h4>
+                            </li>
+                        </form>
+                    )
+                })}                
+                <h4>Please feel free to <Link to ='/addComment'>add a comment</Link></h4> by clicking the link.
             </ul>
             
         </form>

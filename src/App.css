@@ -4,6 +4,9 @@
   border-width: 5px;
   border-style: solid;
   min-height: 100vh;
+  min-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* .App-logo {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import "../css/all";
+import "../css/all.css";
 
 const RevByCat = () => {
     return (
