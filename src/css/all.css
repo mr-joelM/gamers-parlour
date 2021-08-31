@@ -1,0 +1,47 @@
+.header {
+  text-align: center;
+  border-color: rgb(55, 0, 255);
+  border-width: 5px;
+  border-style: solid;
+  min-height: 100vh;
+}
+
+.allreviews {
+  text-align: center;
+  border-color: red;
+  border-width: 5px;
+  border-style: solid;
+  min-height: 100vh;
+}
+
+.categories {
+  text-align: center;
+  border-color: purple;
+  border-width: 5px;
+  border-style: solid;
+  min-height: 100vh;
+}
+
+.singleRev {
+  text-align: center;
+  border-color: green;
+  border-width: 5px;
+  border-style: solid;
+  min-height: 100vh;
+}
+
+.revCom {
+  text-align: center;
+  border-color: rgba(212, 48, 157, 0.979);
+  border-width: 5px;
+  border-style: solid;
+  min-height: 100vh;
+}
+
+.addCom {
+  text-align: center;
+  border-color: rgb(17, 207, 191);
+  border-width: 5px;
+  border-style: solid;
+  min-height: 100vh;
+}

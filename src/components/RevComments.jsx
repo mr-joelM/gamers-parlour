@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
+import "../css/all";
 
 const RevComments = () => {
     return (
-        <form>
+        <form className="revCom">
+            <h1>this is the Review comments page!</h1>
             <ul>
                 <li>
                     <h2>Author: jessjelly</h2>

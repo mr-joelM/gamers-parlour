@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
+import "../css/all";
 
 const Header = () => {
     return (
-        <div>
+        <div className="header">
             <h1>Welcome to Gamers Parlour</h1>
             <nav>
                 <Link to ='/reviews'><h3>Reviews</h3></Link>
-                <Link to ='/categories'><h3>Reviews</h3></Link>
+                <Link to ='/categories'><h3>Categories</h3></Link>
             </nav>
         </div>
     );

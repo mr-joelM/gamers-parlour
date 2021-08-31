@@ -1,14 +1,12 @@
-import {Switch, Route } from "react-router-dom";
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
 import Header from "./components/Header";
 import Reviews from "./components/Reviews";
 import RevByCat from "./components/RevByCat";
 import SingleRev from "./components/SingleRev";
 import RevComments from "./components/RevComments";
 import AddComment from "./components/AddComment";
-
-
 
 function App() {
   return (
@@ -27,14 +25,14 @@ function App() {
         <Route exact path="/reviewComments">
           <RevComments />
         </Route>
-        <Route exact path="/reviewComments">
+        <Route exact path="/addComment">
           <AddComment />
         </Route>
         <Route>
           <p>404. Not Found</p>
         </Route>
       </Switch>
-    <div>
+    </div>
   );
 }
 
