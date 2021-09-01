@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom"; 
 import { Link } from 'react-router-dom'; 
 import "../css/all.css";
+import filigree from"../css/filigree.png";
 
 const RevComments = () => {
     const [revComments, setRevComments] = useState([])
@@ -27,10 +28,11 @@ const RevComments = () => {
                                 <h4>Made by: {comment.author}</h4>
                                 <h4>Posted on: {comment.created_at}</h4>
                             </li>
+                            <img className='filigree_img' src={filigree} alt="decorative filigree"/>
                         </form>
                     )
                 })}                
-                <h4>Please feel free to <Link to ='/addComment'>add a comment</Link></h4> by clicking the link.
+                <h4>Please feel free to <Link to ='/addComment'>add a comment</Link> by clicking the link.</h4>
             </ul>
             
         </form>

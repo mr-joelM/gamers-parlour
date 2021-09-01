@@ -4,13 +4,23 @@ import "../css/all.css";
 
 const Header = () => {
     return (
-        <div className="header">
-            <h1>Welcome to Gamers Parlour</h1>
+        <header className="header">
+            <title>Gamers Parlour</title>
+            <span title="Home"><Link to ='/'><h1>Gamers Parlour</h1></Link></span>
             <nav className="header_nav">
-                <Link to ='/reviews'>Reviews</Link>
-                <Link to ='/categories'>Categories</Link>
+              <span title="Yeap! thats for all the reviews!"><Link to ='/reviews'>Reviews</Link></span>
+              <span title="Pick a Category underneath"><Link to ='/categories'>Categories</Link></span>
+              <span title="Meet our reviewers"><Link to ='/users'>Users</Link></span>
             </nav>
-        </div>
+            <nav className="header_subnav">
+              <ul>
+                <li><Link to ='/categories/strategy'>strategy</Link></li>
+                <li><Link to ='/categories/dexterity'>dexterity</Link></li>
+                <li><Link to ='/categories/push-your-luck'>push-your-luck</Link></li>
+                <li><Link to ='/categories/engine-building'>engine-building</Link></li>
+              </ul>
+            </nav>
+        </header>
     );
 };
 

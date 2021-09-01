@@ -1,25 +1,59 @@
+/* **************Header ***************/
 .header {
   text-align: center;
+  font-size: 25px;
   border-color: rgb(55, 0, 255);
   border-width: 5px;
   border-style: solid;
-  height: 150px;
+  height: 170px;
+}
+
+.header h1 {
+  margin: 18px auto;
 }
 
 .header_nav {
   text-align: center;
+  font-size: 25px;
+  border-color: rgb(234, 0, 255);
+  border-width: 5px;
+  border-style: solid;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header_subnav {
+  text-align: center;
+  font-size: 18px;
   border-color: gold;
   border-width: 5px;
   border-style: solid;
-  height: 50px;
+  height: 30px;
 }
 
+.header_subnav ul {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+/********************** HomePage ******************/
+.homePage {
+  text-align: center;
+  border-color: rgb(10, 235, 216);
+  border-width: 5px;
+  border-style: solid;
+  min-height: 116vh;
+}
+
+/************************ Reviews *********************/
 .allreviews {
   text-align: center;
   border-color: red;
   border-width: 5px;
   border-style: solid;
-  min-height: 100vh;
+  min-height: 116vh;
 }
 
 .categories {
@@ -27,34 +61,64 @@
   border-color: purple;
   border-width: 5px;
   border-style: solid;
-  min-height: 100vh;
+  min-height: 116vh;
 }
 
+/********************** SingleRev *********************/
 .singleRev {
   text-align: center;
   border-color: green;
   border-width: 5px;
   border-style: solid;
-  min-height: 100vh;
+  min-height: 116vh;
 }
 
+/********************** RevComments *****************/
 .revCom {
   text-align: center;
   border-color: rgba(212, 48, 157, 0.979);
   border-width: 5px;
   border-style: solid;
-  min-height: 100vh;
+  min-height: 116vh;
 }
 
+/************************** AddComment *******************/
 .addCom {
   text-align: center;
   border-color: rgb(17, 207, 191);
   border-width: 5px;
   border-style: solid;
-  min-height: 100vh;
+  min-height: 116vh;
 }
 
+/****************************** Users **********************/
+.users {
+  text-align: center;
+  border-color: rgb(245, 39, 24);
+  border-width: 5px;
+  border-style: solid;
+  min-height: 116vh;
+}
+
+/**************************** SingleUser *******************/
+.singleUser {
+  text-align: center;
+  border-color: rgb(24, 120, 245);
+  border-width: 5px;
+  border-style: solid;
+  min-height: 116vh;
+}
+
+/******************* decorations *********************/
+
 .review_list_img,
-.review_img {
+.review_img,
+.user_avatar {
   width: 250px;
+}
+
+.filigree_img {
+  width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

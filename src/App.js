@@ -1,18 +1,24 @@
 import { Switch, Route } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
+import HomePage from "./components/HomePage";
 import Header from "./components/Header";
 import Reviews from "./components/Reviews";
 import RevByCat from "./components/RevByCat";
 import SingleRev from "./components/SingleRev";
 import RevComments from "./components/RevComments";
 import AddComment from "./components/AddComment";
+import Users from "./components/Users";
+import SingleUser from "./components/SingleUser";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
         <Route exact path="/reviews">
           <Reviews />
         </Route>
@@ -28,8 +34,11 @@ function App() {
         <Route exact path="/review/:review_id/addComment">
           <AddComment />
         </Route>
-        <Route>
-          <p>404. Not Found</p>
+        <Route exact path="/users">
+          <Users />
+        </Route>
+        <Route exact path="/users/:username">
+          <SingleUser />
         </Route>
       </Switch>
     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import "../css/all.css";
-import "../css/filigree.png";
+import filigree from"../css/filigree.png";
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
@@ -25,7 +25,7 @@ const Reviews = () => {
                                 <h3>Category: {review.category}</h3>
                                 <img className='review_list_img' src={review.review_img_url} alt={review.title} />
                             </li>
-                            <img className='review_fili_img' src='../css/filigree.png' alt="decorative filigree"/>
+                            <img className='filigree_img' src={filigree} alt="decorative filigree"/>
                         </form>
                     )
                 })}
