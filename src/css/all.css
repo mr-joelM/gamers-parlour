@@ -56,12 +56,21 @@
   min-height: 116vh;
 }
 
+.allreviews > ul {
+  padding: 20px;
+}
+
+/********************* Categories ************************/
 .categories {
   text-align: center;
   border-color: purple;
   border-width: 5px;
   border-style: solid;
   min-height: 116vh;
+}
+
+.categories > ul {
+  padding: 20px;
 }
 
 /********************** SingleRev *********************/
@@ -73,6 +82,10 @@
   min-height: 116vh;
 }
 
+.singleRev > ul {
+  padding: 20px;
+}
+
 /********************** RevComments *****************/
 .revCom {
   text-align: center;
@@ -80,6 +93,10 @@
   border-width: 5px;
   border-style: solid;
   min-height: 116vh;
+}
+
+.revCom > ul {
+  padding: 20px;
 }
 
 /************************** AddComment *******************/

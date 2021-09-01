@@ -5,13 +5,18 @@ import filigree from"../css/filigree.png";
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(()=>{
         fetch('http://gamers-parlour.herokuapp.com/api/reviews' )
         .then((response)=>{return response.json()})
-        .then((data)=>{setReviews(data.reviews)})
+        .then((data)=>{
+            setReviews(data.reviews)
+            setIsLoading(false)
+        })
     },[])
 
+    if(isLoading)return <h3>LOADING...</h3>
     return (
         <div className="allreviews">
             <h1>this is the All Reviews page!</h1>

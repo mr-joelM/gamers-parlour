@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import "../css/all.css";
 
 const RevByCat = () => {
+
     return (
-        <form className="categories">
+        <form className="revByCat">
             <h2>Reviews by Category: Strategy</h2>
             <ul>
                 <li>

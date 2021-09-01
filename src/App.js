@@ -4,10 +4,11 @@ import "./App.css";
 import HomePage from "./components/HomePage";
 import Header from "./components/Header";
 import Reviews from "./components/Reviews";
-import RevByCat from "./components/RevByCat";
 import SingleRev from "./components/SingleRev";
 import RevComments from "./components/RevComments";
 import AddComment from "./components/AddComment";
+import Categories from "./components/Categories";
+import RevByCat from "./components/RevByCat";
 import Users from "./components/Users";
 import SingleUser from "./components/SingleUser";
 
@@ -22,9 +23,6 @@ function App() {
         <Route exact path="/reviews">
           <Reviews />
         </Route>
-        <Route exact path="/categories">
-          <RevByCat />
-        </Route>
         <Route exact path="/review/:review_id">
           <SingleRev />
         </Route>
@@ -33,6 +31,12 @@ function App() {
         </Route>
         <Route exact path="/review/:review_id/addComment">
           <AddComment />
+        </Route>
+        <Route exact path="/categories">
+          <Categories />
+        </Route>
+        <Route exact path="/reviews?category=">
+          <RevByCat />
         </Route>
         <Route exact path="/users">
           <Users />

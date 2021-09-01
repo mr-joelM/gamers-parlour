@@ -15,10 +15,18 @@ const RevComments = () => {
     },[])
 
     console.log(revComments)
+    if(revComments === undefined){
+        return(
+            <form className="revCom">
+                <h3>No comments for this review yet.</h3>
+                <h4>Please feel free to <Link to ={`/review/${review_id}/addComment`}>add a comment</Link> by clicking the link.</h4>
+            </form>
+        )
+    }else{
 
     return (
         <form className="revCom">
-            <h1>this is the Review comments page!</h1>
+            <h1>This is the Review comments page!</h1>
             <ul>
                 {revComments.map((comment)=>{
                     return(
@@ -32,11 +40,12 @@ const RevComments = () => {
                         </form>
                     )
                 })}                
-                <h4>Please feel free to <Link to ='/addComment'>add a comment</Link> by clicking the link.</h4>
+                <h4>Please feel free to <Link to ={`/review/${review_id}/addComment`}>add a comment</Link> by clicking the link.</h4>
             </ul>
             
         </form>
-    );
+    )};
 };
 
 export default RevComments;
+
