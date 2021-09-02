@@ -5,7 +5,7 @@
   border-color: rgb(55, 0, 255);
   border-width: 5px;
   border-style: solid;
-  height: 170px;
+  height: 145px;
 }
 
 .header h1 {
@@ -23,15 +23,6 @@
   justify-content: space-around;
 }
 
-.header_subnav {
-  text-align: center;
-  font-size: 18px;
-  border-color: gold;
-  border-width: 5px;
-  border-style: solid;
-  height: 30px;
-}
-
 .header_subnav ul {
   display: flex;
   justify-content: space-around;
@@ -44,29 +35,32 @@
   border-color: rgb(10, 235, 216);
   border-width: 5px;
   border-style: solid;
-  min-height: 116vh;
+  min-height: 108vh;
 }
 
 /************************ Reviews *********************/
-.allreviews {
+.reviews {
   text-align: center;
   border-color: red;
   border-width: 5px;
   border-style: solid;
-  min-height: 116vh;
+  min-height: 108vh;
 }
 
-.allreviews > ul {
+.reviews > ul {
   padding: 20px;
 }
 
+.page_button {
+  padding-bottom: 20px;
+}
 /********************* Categories ************************/
 .categories {
   text-align: center;
   border-color: purple;
   border-width: 5px;
   border-style: solid;
-  min-height: 116vh;
+  min-height: 108vh;
 }
 
 .categories > ul {
@@ -79,7 +73,7 @@
   border-color: green;
   border-width: 5px;
   border-style: solid;
-  min-height: 116vh;
+  min-height: 108vh;
 }
 
 .singleRev > ul {
@@ -92,7 +86,7 @@
   border-color: rgba(212, 48, 157, 0.979);
   border-width: 5px;
   border-style: solid;
-  min-height: 116vh;
+  min-height: 108vh;
 }
 
 .revCom > ul {
@@ -105,7 +99,7 @@
   border-color: rgb(17, 207, 191);
   border-width: 5px;
   border-style: solid;
-  min-height: 116vh;
+  min-height: 108vh;
 }
 
 /****************************** Users **********************/
@@ -114,7 +108,7 @@
   border-color: rgb(245, 39, 24);
   border-width: 5px;
   border-style: solid;
-  min-height: 116vh;
+  min-height: 108vh;
 }
 
 /**************************** SingleUser *******************/
@@ -123,7 +117,7 @@
   border-color: rgb(24, 120, 245);
   border-width: 5px;
   border-style: solid;
-  min-height: 116vh;
+  min-height: 108vh;
 }
 
 /******************* decorations *********************/

@@ -20,7 +20,7 @@ const Categories = () => {
                     return(
                         <form>
                             <li className='cats_listing' key={category.slug}>
-                                <h2><Link to = {`/reviews?category=${category.slug}`}>{category.slug}</Link></h2>
+                                <h2><Link to = {`/reviews/${category.slug}`}>{category.slug}</Link></h2>
                                 <h4>"{category.description}"</h4>
                             </li>
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>

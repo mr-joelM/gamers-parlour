@@ -35,8 +35,8 @@ function App() {
         <Route exact path="/categories">
           <Categories />
         </Route>
-        <Route exact path="/reviews?category=">
-          <RevByCat />
+        <Route exact path="/reviews/:category">
+          <Reviews />
         </Route>
         <Route exact path="/users">
           <Users />

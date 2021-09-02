@@ -1,25 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; 
+import { useParams } from "react-router-dom"; 
 import "../css/all.css";
 import filigree from"../css/filigree.png";
+import axios from 'axios';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [page, setPage] = useState(1)
+    const { category } = useParams();
+
+    const getReviews = async () => {
+        const { data } = await axios.get('http://gamers-parlour.herokuapp.com/api/reviews',{
+            params:{ category , page}
+        })
+        return data
+    }
 
     useEffect(()=>{
-        fetch('http://gamers-parlour.herokuapp.com/api/reviews' )
-        .then((response)=>{return response.json()})
+        getReviews()
         .then((data)=>{
             setReviews(data.reviews)
             setIsLoading(false)
         })
-    },[])
+    },[page])
 
     if(isLoading)return <h3>LOADING...</h3>
     return (
-        <div className="allreviews">
-            <h1>this is the All Reviews page!</h1>
+        <div className="reviews">
+            <h2>{category ? `This is the Reviews by category:${category}`:'This is the All Reviews page!'}</h2>
             <ul>
                 {reviews.map((review)=>{
                     return(
@@ -35,6 +45,11 @@ const Reviews = () => {
                     )
                 })}
             </ul>
+            <section className="page_button">
+                <button disabled={page === 1} onClick={() => setPage((cPage)=> cPage -1)}>{'<'} </button>
+                     Page:{page} 
+                <button onClick={() => setPage((cPage)=> cPage +1)}> {'>'}</button>
+            </section>
         </div>
     );
 };

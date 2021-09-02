@@ -14,7 +14,7 @@ const RevComments = () => {
         .then((data)=>{setRevComments(data.comments)})
     },[])
 
-    console.log(revComments)
+    
     if(revComments === undefined){
         return(
             <form className="revCom">
