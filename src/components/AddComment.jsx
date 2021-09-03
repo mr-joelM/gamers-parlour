@@ -34,15 +34,18 @@ const AddComment = () => {
             <h4>(note that for demonstration purpose we will let you use the account of "happyamy2016" to post your new comment)</h4>
             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
             <form onSubmit= {handleSubmit}>
-                <label htmlFor="addcom_user_input" className="addcom_user">Enter your username:</label>
-                <input id="addcom_user_input" type="text" placeholder="happyamy2016" required pattern="happyamy2016" required
-                value={user} onChange={(event)=> setUser(event.target.value)}></input>
+                <div className="addcom_user">
+                    <label htmlFor="addcom_user_input" className="addcom_user_label">Enter your username:</label>
+                    <input id="addcom_user_input" type="text"  required pattern="happyamy2016" required
+                    value={user} onChange={(event)=> setUser(event.target.value)}></input>
+                </div>
                 <br></br>
-                <label className="addcom_text">Write your comment: 
-                    <textarea minLength="10" maxLength="150" rows="4" cols="35" required
-                    value={newComment} onChange={(event)=> setNewComment(event.target.value)}                            
-                    ></textarea>
-                </label>
+                <div className="addcom_body">
+                    <label htmlFor="addcom_body_input" className="addcom_body_label">Write your comment: </label>
+                    <br></br>
+                    <textarea id="addcom_body_input" minLength="10" maxLength="150" rows="4" cols="35" required
+                    value={newComment} onChange={(event)=> setNewComment(event.target.value)}></textarea>
+                </div>
                 <br></br>
                 <button className="addcom_button">Submit new comment</button>
             </form>

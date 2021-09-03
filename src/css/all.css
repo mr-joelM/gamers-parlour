@@ -139,6 +139,37 @@
   min-height: 108vh;
 }
 
+.addcom_user {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#addcom_user_input {
+  color: black;
+  overflow: hidden;
+  border-radius: 5px;
+  text-shadow: 0px 0px 0px dimgray;
+}
+
+.addcom_body {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#addcom_body_input {
+  color: black;
+  overflow: hidden;
+  border-radius: 5px;
+  text-shadow: 0px 0px 0px dimgray;
+}
+
+.addcom_button {
+  background-color: dimgray;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /****************************** Users **********************/
 .users {
   margin: auto;
@@ -175,5 +206,4 @@
   width: 350px;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: silver;
 }
