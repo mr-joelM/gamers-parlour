@@ -7,7 +7,7 @@ const Users = () => {
     const [users, setUsers] = useState ([])
 
     useEffect(()=>{
-        fetch('http://gamers-parlour.herokuapp.com/api/users' )
+        fetch('https://gamers-parlour.herokuapp.com/api/users' )
         .then((response)=>{return response.json()})
         .then((data)=>{setUsers(data.allUsersUsernames)})
     },[])

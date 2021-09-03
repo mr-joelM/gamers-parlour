@@ -12,7 +12,7 @@ const Reviews = () => {
     const { category } = useParams();
 
     const getReviews = async () => {
-        const { data } = await axios.get('http://gamers-parlour.herokuapp.com/api/reviews',{
+        const { data } = await axios.get('https://gamers-parlour.herokuapp.com/api/reviews',{
             params:{ category , page}
         })
         console.log(data)

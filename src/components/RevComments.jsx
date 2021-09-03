@@ -10,7 +10,7 @@ const RevComments = () => {
     const { review_id } = useParams(); 
 
     useEffect(()=>{
-        fetch(`http://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments?page=${page}`)
+        fetch(`https://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments?page=${page}`)
         .then((response)=>{return response.json()})
         .then((data)=>{setRevComments(data.comments)})
     },[review_id, page])

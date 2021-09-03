@@ -22,7 +22,7 @@ const AddComment = () => {
     }
 
     const postComment = (review_id, commentToPost) => {
-        return axios.post(`http://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments`, commentToPost)
+        return axios.post(`https://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments`, commentToPost)
         .then((response) => {         
         return response.data.newComment
         }) 

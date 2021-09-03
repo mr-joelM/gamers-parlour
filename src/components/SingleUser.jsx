@@ -8,7 +8,7 @@ const SingleUser = () => {
     const { username } = useParams(); 
 
     useEffect(()=>{
-        fetch(`http://gamers-parlour.herokuapp.com/api/users/${username}` )
+        fetch(`https://gamers-parlour.herokuapp.com/api/users/${username}` )
         .then((response)=>{return response.json()})
         .then((data)=>{setSingleUser(data.user)})
     },[])

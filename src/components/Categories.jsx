@@ -7,7 +7,7 @@ const Categories = () => {
     const [cats, setCats] = useState([])
 
     useEffect(()=>{
-        fetch('http://gamers-parlour.herokuapp.com/api/categories' )
+        fetch('https://gamers-parlour.herokuapp.com/api/categories' )
         .then((response)=>{return response.json()})
         .then((data)=>{setCats(data.categories)})
     },[])
