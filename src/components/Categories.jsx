@@ -13,22 +13,22 @@ const Categories = () => {
     },[])
 
     return (
-        <form className="categories">
+        <div className="categories">
             <h2>This is the category page!!</h2>
             <ul>
                 {cats.map((category)=>{
                     return(
-                        <form>
-                            <li className='cats_listing' key={category.slug}>
+                        <li>
+                            <div className='cats_listing' key={category.slug}>
                                 <h2><Link to = {`/reviews/${category.slug}`}>{category.slug}</Link></h2>
                                 <h4>"{category.description}"</h4>
-                            </li>
+                            </div>
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
-                        </form>
+                        </li>
                     )
                 })}
             </ul>            
-        </form>
+        </div>
     );
 };
 

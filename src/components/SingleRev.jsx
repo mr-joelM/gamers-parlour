@@ -14,7 +14,7 @@ const SingleRev = () => {
     },[])
 
     return (
-        <form className="singleRev">
+        <div className="singleRev">
             <h1>this is the Single Review page!</h1>
             <ul>
                 <li className='review' key={singleReview.review_id}>
@@ -31,7 +31,7 @@ const SingleRev = () => {
                     <h4>We would like to have your opinion, please feel free to update the votes result by using the provided buttons.</h4>
                 </li>
             </ul>
-        </form>
+        </div>
     );
 };
 

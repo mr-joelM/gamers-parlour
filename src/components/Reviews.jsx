@@ -33,15 +33,15 @@ const Reviews = () => {
             <ul>
                 {reviews.map((review)=>{
                     return(
-                        <form>
-                            <li className="all-reviews-list" key={review.review_id}>
+                        <li>
+                            <div className="all-reviews-list" key={review.review_id}>
                                 <h2><Link to ={`/review/${review.review_id}`}>{review.title}</Link></h2>
                                 <h3>Review Owner: {review.owner}</h3>
                                 <h3>Category: {review.category}</h3>
                                 <img className='review_list_img' src={review.review_img_url} alt={review.title} />
-                            </li>
+                            </div>
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
-                        </form>
+                        </li>
                     )
                 })}
             </ul>

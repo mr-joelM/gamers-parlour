@@ -14,7 +14,7 @@ const SingleUser = () => {
     },[])
 
     return (
-        <form className="singleUser">
+        <div className="singleUser">
             <h1>This is the single user page!!</h1>
             <ul>
                 <li className='user' key={singleUser.username}>
@@ -23,7 +23,7 @@ const SingleUser = () => {
                     <img className='user_avatar' src={singleUser.avatar_url} alt={singleUser.username}/>                    
                 </li>
             </ul>                 
-        </form>
+        </div>
     );
 };
 

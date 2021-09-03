@@ -13,21 +13,19 @@ const Users = () => {
     },[])
 
     return (
-        <form className="users">
+        <div className="users">
             <h1>This is the Users page !!</h1>
             <ul>
                 {users.map((user)=>{
                     return(
-                        <form>
-                            <li className='users_listing' key={user.username}>
-                                <h2><Link to = {`/users/${user.username}`}>{user.username}</Link></h2>
-                            </li>
+                        <li className='users_listing' key={user.username}>
+                            <h2><Link to = {`/users/${user.username}`}>{user.username}</Link></h2>                            
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
-                        </form>
+                        </li>
                     )
                 })}
             </ul>
-        </form>
+        </div>
     );
 };
 

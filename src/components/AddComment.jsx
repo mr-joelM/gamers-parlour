@@ -10,10 +10,10 @@ const AddComment = () => {
     const [user, setUser] = useState('')
     const { review_id } = useParams(); 
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event) => {        
         event.preventDefault();
         const commentToPost ={
-            author: user,
+            username: user,
             review_id: review_id,
             votes: 0,
             body: newComment,
@@ -21,17 +21,12 @@ const AddComment = () => {
         postComment(review_id, commentToPost)
     }
 
-    const postComment = async (review_id, commentToPost) => {
-        const { data } = await axios.post(`http://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments`, commentToPost)
-        console.log(data.newComment)
-        return data.newComment
-         
-    }
-
-    // useEffect(()=>{
-    //     postComment()
-    //     .then
-    // })
+    const postComment = (review_id, commentToPost) => {
+        return axios.post(`http://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments`, commentToPost)
+        .then((response) => {         
+        return response.data.newComment
+        }) 
+        }   
 
     return (
         <div className="addCom">
@@ -51,7 +46,7 @@ const AddComment = () => {
                 <br></br>
                 <button className="addcom_button">Submit new comment</button>
             </form>
-            <img className='filigree_img' src={filigree} alt="decorative filigree"/>         
+            <img className='filigree_img' src={filigree} alt="decorative filigree"/>        
         </div>
     );
 };

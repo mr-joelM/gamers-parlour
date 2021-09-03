@@ -9,7 +9,7 @@ const Header = () => {
             <span title="Home"><Link to ='/'><h1>Gamers Parlour</h1></Link></span>
             <nav className="header_nav">
               <span title="Yeap! thats for all the reviews!"><Link to ='/reviews'>Reviews</Link></span>
-              <span title="Pick a Category underneath"><Link to ='/categories'>Categories</Link></span>
+              <span title="Pick a Category"><Link to ='/categories'>Categories</Link></span>
               <span title="Meet our reviewers"><Link to ='/users'>Users</Link></span>
             </nav>            
         </header>
