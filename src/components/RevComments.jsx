@@ -37,6 +37,7 @@ const RevComments = () => {
                                 <h3>"{comment.body}"</h3>                                
                                 <h4>Made by: {comment.author}</h4>
                                 <h4>Posted on: {comment.created_at}</h4>
+                                <h4>Current votes: {comment.votes}</h4>
                             </div>
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
                         </li>
