@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom"; 
 import { Link } from 'react-router-dom'; 
 import "../css/all.css";
+import VotingButtonsRev from './VotingButtonsRev';
 
 const SingleRev = () => {
     const [singleReview, setSingleReview] = useState({})
@@ -28,6 +29,7 @@ const SingleRev = () => {
                     <Link to ={`/review/${singleReview.review_id}/comments`}><h3>View all comments</h3></Link>
                     <Link to ={`/review/${singleReview.review_id}/addComment`}><h3>Add a comment</h3></Link>
                     <h3>Current votes for this review: {singleReview.votes}</h3>
+                        <VotingButtonsRev review_id={review_id} setSingleReview={setSingleReview}/>
                     <h4>We would like to have your opinion, please feel free to update the votes result by using the provided buttons.</h4>
                 </li>
             </ul>
