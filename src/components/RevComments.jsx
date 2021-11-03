@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom'; 
 import "../css/all.css";
 import filigree from"../css/filigree.png";
+import VotingButtonsCom from './VotingButtonsCom';
+import {parseDate} from "../utils";
+
 
 const RevComments = () => {
     const [revComments, setRevComments] = useState([])
@@ -15,7 +18,8 @@ const RevComments = () => {
         .then((data)=>{setRevComments(data.comments)})
     },[review_id, page])
 
-    console.log(page)
+    //console.log(page)
+    
     
     if(revComments === undefined){
         return(
@@ -30,14 +34,16 @@ const RevComments = () => {
         <div className="revCom">
             <h1>This is the Review comments page!</h1>
             <ul>
-                {revComments.map((comment)=>{
+                {revComments.map((comment, index)=>{
                     return(
                         <li>
                             <div className='rev_com_list' key={comment.comment_id}>
                                 <h3>"{comment.body}"</h3>                                
                                 <h4>Made by: {comment.author}</h4>
-                                <h4>Posted on: {comment.created_at}</h4>
+                                <h4>Posted on: {parseDate(comment.created_at)}</h4>
                                 <h4>Current votes: {comment.votes}</h4>
+                                {/* {console.log(comment.votes)} */}
+                                <VotingButtonsCom review_id={review_id} index={index} setRevComments={setRevComments}/>
                             </div>
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
                         </li>
