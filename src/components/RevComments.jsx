@@ -36,7 +36,7 @@ const RevComments = () => {
             <ul>
                 {revComments.map((comment, index)=>{
                     return(
-                        <li>
+                        <li key={comment.comment_id}>
                             <div className='rev_com_list' key={comment.comment_id}>
                                 <h3>"{comment.body}"</h3>                                
                                 <h4>Made by: {comment.author}</h4>
