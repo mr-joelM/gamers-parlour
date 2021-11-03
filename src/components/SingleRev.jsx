@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom'; 
 import "../css/all.css";
 import VotingButtonsRev from './VotingButtonsRev';
+import {parseDate} from "../utils";
 
 const SingleRev = () => {
     const [singleReview, setSingleReview] = useState({})
@@ -25,6 +26,7 @@ const SingleRev = () => {
                     <img className='review_img' src={singleReview.review_img_url} alt={singleReview.title}/>
                     <h3>Game designer:{singleReview.designer}</h3>
                     <h3>Game category:{singleReview.category}</h3>
+                    <h3>Posted on: {parseDate(singleReview.created_at)}</h3>
                     <h3>Comments count:{singleReview.comment_count}</h3>
                     <Link to ={`/review/${singleReview.review_id}/comments`}><h3>View all comments</h3></Link>
                     <Link to ={`/review/${singleReview.review_id}/addComment`}><h3>Add a comment</h3></Link>
