@@ -33,7 +33,7 @@ const Reviews = () => {
             <ul>
                 {reviews.map((review)=>{
                     return(
-                        <li>
+                        <li key={review.review_id}>
                             <div className="all-reviews-list" key={review.review_id}>
                                 <h2><Link to ={`/review/${review.review_id}`}>{review.title}</Link></h2>
                                 <h3>Review Owner: {review.owner}</h3>
