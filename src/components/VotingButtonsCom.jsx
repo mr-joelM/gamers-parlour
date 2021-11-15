@@ -35,6 +35,7 @@ const VotingButtonsCom = ({review_id, index, setRevComments}) => {
                 setRevComments(comment=>{
                     const newComment=[...comment]
                     newComment[index].votes+=0.5
+                    //console.log(newComment[index].votes)
                     return newComment
                 })
             }}> + </button>            
