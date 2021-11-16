@@ -18,7 +18,7 @@ const Categories = () => {
             <ul>
                 {cats.map((category)=>{
                     return(
-                        <li>
+                        <li key={category.slug}>
                             <div className='cats_listing' key={category.slug}>
                                 <h2><Link to = {`/reviews/${category.slug}`}>{category.slug}</Link></h2>
                                 <h4>"{category.description}"</h4>
