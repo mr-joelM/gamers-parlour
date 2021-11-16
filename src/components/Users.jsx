@@ -20,7 +20,7 @@ const Users = () => {
                 {users.map((user)=>{
                     return(
                         <li className='users_listing' key={user.username}>
-                            <h2><Link to = {`/users/${user.username}`}>{user.username}</Link></h2>                            
+                            <h2><Link to = {`/users/${user.username}`} className="link">{user.username}</Link></h2>                            
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
                         </li>
                     )

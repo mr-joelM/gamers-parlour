@@ -27,7 +27,7 @@ const RevComments = () => {
         return(
             <form className="revCom">
                 <h3>No comments for this review yet.</h3>
-                <h4>Please feel free to <Link to ={`/review/${review_id}/addComment`}>add a comment</Link> by clicking the link.</h4>
+                <h4>Please feel free to <Link to ={`/review/${review_id}/addComment`} className="link">add a comment</Link> by clicking the link.</h4>
             </form>
         )
     }else{
@@ -51,7 +51,7 @@ const RevComments = () => {
                         </li>
                     )
                 })}                
-                <h4>Please feel free to <Link to ={`/review/${review_id}/addComment`}>add a comment</Link> by clicking the link.</h4>
+                <h4>Please feel free to <Link to ={`/review/${review_id}/addComment`} className="link">add a comment</Link> by clicking the link.</h4>
             </ul>
             <section className="page_button">
                 <button disabled={page === 1} onClick={() => setPage((cPage)=> cPage -1)}>{'<'} </button>

@@ -22,7 +22,7 @@ const Categories = () => {
                     return(
                         <li key={category.slug}>
                             <div className='cats_listing' key={category.slug}>
-                                <h2><Link to = {`/reviews/${category.slug}`}>{category.slug}</Link></h2>
+                                <h2><Link to = {`/reviews/${category.slug}`} className="link">{category.slug}</Link></h2>
                                 <h4>"{category.description}"</h4>
                             </div>
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>

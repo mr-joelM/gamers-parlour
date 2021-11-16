@@ -36,7 +36,7 @@ const Reviews = () => {
                     return(
                         <li key={review.review_id}>
                             <div className="all-reviews-list" key={review.review_id}>
-                                <h2><Link to ={`/review/${review.review_id}`}>{review.title}</Link></h2>
+                                <h2 ><Link to ={`/review/${review.review_id}`}className="link">{review.title}  </Link></h2>
                                 <h3>Review Owner: {review.owner}</h3>
                                 <h3>Category: {review.category}</h3>
                                 <img className='review_list_img' src={review.review_img_url} alt={review.title} />

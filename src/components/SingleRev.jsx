@@ -10,12 +10,13 @@ const SingleRev = () => {
     const { review_id } = useParams(); 
 
     useEffect(()=>{
+        window.scrollTo(0, 0)
         fetch(`https://gamers-parlour.herokuapp.com/api/reviews/${review_id}` )
         .then((response)=>{return response.json()})
         .then((data)=>{setSingleReview(data.review)})
     },[])
     
-    window.scrollTo(0, 0)
+    
     
     return (
         <div className="singleRev">
@@ -30,8 +31,8 @@ const SingleRev = () => {
                     <h3>Game category:{singleReview.category}</h3>
                     <h3>Posted on: {parseDate(singleReview.created_at)}</h3>
                     <h3>Comments count:{singleReview.comment_count}</h3>
-                    <Link to ={`/review/${singleReview.review_id}/comments`}><h3>View all comments</h3></Link>
-                    <Link to ={`/review/${singleReview.review_id}/addComment`}><h3>Add a comment</h3></Link>
+                    <Link to ={`/review/${singleReview.review_id}/comments`}><h3 className="link">View all comments</h3></Link>
+                    <Link to ={`/review/${singleReview.review_id}/addComment`}><h3 className="link">Add a comment</h3></Link>
                     <h3>Current votes for this review: {singleReview.votes}</h3>
                         <VotingButtonsRev review_id={review_id} setSingleReview={setSingleReview}/>
                     <h4>We would like to have your opinion, please feel free to update the votes result by using the provided buttons.</h4>
