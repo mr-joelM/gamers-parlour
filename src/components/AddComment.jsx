@@ -26,7 +26,9 @@ const AddComment = () => {
         .then((response) => {         
         return response.data.newComment
         }) 
-        }   
+        }  
+        
+    window.scrollTo(0, 0)
 
     return (
         <div className="addCom">

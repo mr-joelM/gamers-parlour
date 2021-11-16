@@ -8,6 +8,7 @@ const SingleUser = () => {
     const { username } = useParams(); 
 
     useEffect(()=>{
+        window.scrollTo(0, 0)
         fetch(`https://gamers-parlour.herokuapp.com/api/users/${username}` )
         .then((response)=>{return response.json()})
         .then((data)=>{setSingleUser(data.user)})

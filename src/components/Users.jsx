@@ -7,6 +7,7 @@ const Users = () => {
     const [users, setUsers] = useState ([])
 
     useEffect(()=>{
+        window.scrollTo(0, 0)
         fetch('https://gamers-parlour.herokuapp.com/api/users' )
         .then((response)=>{return response.json()})
         .then((data)=>{setUsers(data.allUsersUsernames)})

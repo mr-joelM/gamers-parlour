@@ -5,6 +5,8 @@ import filigree from"../css/filigree.png";
 
 const HomePage = () => {
 
+    window.scrollTo(0, 0)
+    
     return (
         <div className="homePage">
             <h1>Welcome to Gamers Parlour!</h1>

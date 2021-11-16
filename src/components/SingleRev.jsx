@@ -14,7 +14,9 @@ const SingleRev = () => {
         .then((response)=>{return response.json()})
         .then((data)=>{setSingleReview(data.review)})
     },[])
-
+    
+    window.scrollTo(0, 0)
+    
     return (
         <div className="singleRev">
             <h1>this is the Single Review page!</h1>

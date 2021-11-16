@@ -19,6 +19,7 @@ const Reviews = () => {
     }
 
     useEffect(()=>{
+        window.scrollTo(0, 0)
         getReviews()
         .then((data)=>{
             setReviews(data.reviews)

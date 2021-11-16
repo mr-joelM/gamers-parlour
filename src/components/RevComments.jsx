@@ -13,6 +13,7 @@ const RevComments = () => {
     const { review_id } = useParams(); 
 
     useEffect(()=>{
+        window.scrollTo(0, 0)
         fetch(`https://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments?page=${page}`)
         .then((response)=>{return response.json()})
         .then((data)=>{setRevComments(data.comments)})
@@ -21,6 +22,7 @@ const RevComments = () => {
     //console.log(page)
     
     
+
     if(revComments === undefined){
         return(
             <form className="revCom">

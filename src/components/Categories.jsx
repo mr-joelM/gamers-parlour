@@ -12,6 +12,8 @@ const Categories = () => {
         .then((data)=>{setCats(data.categories)})
     },[])
 
+    window.scrollTo(0, 0)
+
     return (
         <div className="categories">
             <h2>This is the category page!!</h2>
