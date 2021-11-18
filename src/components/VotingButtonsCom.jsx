@@ -1,44 +1,31 @@
-import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const VotingButtonsCom = ({review_id, index, setRevComments}) => {
-    const [voting, setVoting]= useState (0)
+const VotingButtonsCom = ({comment_id, setRevComments}) => {
+    
 
-    const UpdateVote = async () => {
-        const { data } = await axios.patch(`https://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments`,{inc_votes: voting})
-        return data
+    const UpdateVote = async (vote) => {
+         await axios.patch(`https://gamers-parlour.herokuapp.com/api/comments/${comment_id}`,{inc_votes: vote})
+          .then((response)=>{
+             
+            
+            const {updatedComment} = response.data
+            setRevComments(comments=>{
+             const newComments=comments.map((comment)=>{
+                if(comment.comment_id === comment_id){
+                    comment.votes = updatedComment.votes
+                }
+                return comment
+            })
+             return newComments
+         })
+    })
     }
 
-    useEffect(()=>{
-        if(voting !== 0){UpdateVote()
-            .then((data)=>{
-                setVoting(0)
-            })}
-        
-    }, [voting])
-
+    
     return (
         <div>
-            <button className="decreaseButton" onClick={(event)=>{
-                // update database
-                setVoting(currVotes => currVotes - 1)
-                setRevComments(comment=>{
-                    const newComment=[...comment]
-                    newComment[index].votes-=0.5
-                    //console.log(newComment[index].votes)
-                    return newComment
-                })
-            }}> - </button>
-            <button className="increaseButton" onClick={(event)=>{
-                // update database
-                setVoting(currVotes => currVotes + 1)
-                setRevComments(comment=>{
-                    const newComment=[...comment]
-                    newComment[index].votes+=0.5
-                    //console.log(newComment[index].votes)
-                    return newComment
-                })
-            }}> + </button>            
+            <button className="decreaseButton" onClick={(event)=>{UpdateVote(-1)}}> - </button>
+            <button className="increaseButton" onClick={(event)=>{UpdateVote(+1)}}> + </button>            
         </div>
     );
 };

@@ -36,7 +36,8 @@ const RevComments = () => {
         <div className="revCom">
             <h1>This is the Review comments page!</h1>
             <ul>
-                {revComments.map((comment, index)=>{
+                {revComments.map((comment)=>{
+                    if(!comment){return null}
                     return(
                         <li key={comment.comment_id}>
                             <div className='rev_com_list' key={comment.comment_id}>
@@ -44,8 +45,7 @@ const RevComments = () => {
                                 <h4>Made by: {comment.author}</h4>
                                 <h4>Posted on: {parseDate(comment.created_at)}</h4>
                                 <h4>Current votes: {comment.votes}</h4>
-                                {/* {console.log(comment.votes)} */}
-                                <VotingButtonsCom review_id={review_id} index={index} setRevComments={setRevComments}/>
+                                <VotingButtonsCom comment_id={comment.comment_id} setRevComments={setRevComments}/>
                             </div>
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
                         </li>
