@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Gamers Parlour Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Description](#description)
+- [Links](#links)
+- [Install and Run locally](#install-and-run-locally)
+- [Technologies](#technologies)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Gamers Parlour is a place for games reviews and comments rating, and a website which interacts with the backend API I created previously.
+This project is a React app built using JavaScript. Using Axios and Fetch to make API calls to my Gamers Parlour Backend API and React Router to render the app's different components. The app was created with JSX styled with CSS.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Links
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Front End:
 
-### `npm run build`
+- A working example of the website hosted on [Netlify](https://gamers-parlour.netlify.app/)
+- The [GitHub link](https://github.com/mr-joelM/gamers-parlour-frontend) of Gamers-Parlour Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Back End:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The [GitHub link](https://github.com/mr-joelM/gamers-parlour-backend) of Gamers-Parlour Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Install and Run locally
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To install gamers-parlour-frontend locally, follow these steps:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Ensure you have the following installed:
+   - Node.js (download [here](https://nodejs.org/en/))
+2. Fork and clone the repo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+    git clone <repo-url>
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Open the repo and install dependencies:
 
-## Learn More
+```
+    npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Run start script
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+    npm run start
+```
 
-### Code Splitting
+If successful, your browser should open on `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Node.js](https://nodejs.org/en/) v14.17.4 LTS
+- [React.js](https://reactjs.org/) v17.0.2
+- [Axios](https://axios-http.com/) v0.21.1
