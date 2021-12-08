@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from './Spinner';
 import "../css/all.css";
 import filigree from"../css/filigree.png";
 
 const Users = () => {
     const [users, setUsers] = useState ([])
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(()=>{
         window.scrollTo(0, 0)
+        setIsLoading(true)
         fetch('https://gamers-parlour.herokuapp.com/api/users' )
         .then((response)=>{return response.json()})
-        .then((data)=>{setUsers(data.allUsersUsernames)})
+        .then((data)=>{
+            setUsers(data.allUsersUsernames)
+            setIsLoading(false)
+        })
     },[])
+
+    if(isLoading)return <Spinner />
 
     return (
         <div className="users">
