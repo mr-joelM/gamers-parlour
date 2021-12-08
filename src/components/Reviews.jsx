@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom"; 
 import "../css/all.css";
 import filigree from"../css/filigree.png";
+import Spinner from './Spinner';
 import axios from 'axios';
 
 const Reviews = () => {
@@ -19,6 +20,7 @@ const Reviews = () => {
     }
 
     useEffect(()=>{
+        setIsLoading(true)
         window.scrollTo(0, 0)
         getReviews()
         .then((data)=>{
@@ -27,7 +29,8 @@ const Reviews = () => {
         })
     },[page])
 
-    if(isLoading)return <h3>LOADING...</h3>
+    if(isLoading)return <Spinner />
+
     return (
         <div className="reviews">
             <h2>{category ? `This is the Reviews by category:${category}`:'This is the All Reviews page!'}</h2>
