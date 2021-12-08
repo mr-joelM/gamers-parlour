@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom"; 
 import { Link } from 'react-router-dom'; 
+import Spinner from './Spinner';
 import "../css/all.css";
 import filigree from"../css/filigree.png";
 import VotingButtonsCom from './VotingButtonsCom';
@@ -10,18 +11,23 @@ import {parseDate} from "../utils";
 const RevComments = () => {
     const [revComments, setRevComments] = useState([])
     const [page, setPage] = useState(1)
+    const [isLoading, setIsLoading] = useState(true)
     const { review_id } = useParams(); 
 
     useEffect(()=>{
+        setIsLoading(true)
         window.scrollTo(0, 0)
         fetch(`https://gamers-parlour.herokuapp.com/api/reviews/${review_id}/comments?page=${page}`)
         .then((response)=>{return response.json()})
-        .then((data)=>{setRevComments(data.comments)})
+        .then((data)=>{
+            setRevComments(data.comments)
+            setIsLoading(false)
+        })
     },[review_id, page])
 
     //console.log(page)
     
-    
+    if(isLoading)return <Spinner />
 
     if(revComments === undefined){
         return(
