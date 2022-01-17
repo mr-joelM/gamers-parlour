@@ -23,12 +23,12 @@ const Users = () => {
 
     return (
         <div className="users">
-            <h1>This is the Users page !!</h1>
+            <h2>Meet our reviewers</h2>
             <ul>
                 {users.map((user)=>{
                     return(
                         <li className='users_listing' key={user.username}>
-                            <h2><Link to = {`/users/${user.username}`} className="link">{user.username}</Link></h2>                            
+                            <h3><Link to = {`/users/${user.username}`} className="link">{user.username}</Link></h3>                            
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
                         </li>
                     )

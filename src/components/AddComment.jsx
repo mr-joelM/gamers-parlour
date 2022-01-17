@@ -32,7 +32,7 @@ const AddComment = () => {
 
     return (
         <div className="addCom">
-            <h2>this is the add comment page!</h2>
+            <h3>Leave your comment bellow</h3>
             <h4>(note that for demonstration purpose we will let you use the account of "happyamy2016" to post your new comment)</h4>
             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
             <form onSubmit= {handleSubmit}>

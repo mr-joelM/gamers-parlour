@@ -16,7 +16,6 @@ const SingleUser = () => {
 
     return (
         <div className="singleUser">
-            <h1>This is the single user page!!</h1>
             <ul>
                 <li className='user' key={singleUser.username}>
                     <h2>{singleUser.name}</h2>

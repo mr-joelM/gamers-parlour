@@ -33,15 +33,15 @@ const Reviews = () => {
 
     return (
         <div className="reviews">
-            <h2>{category ? `This is the Reviews by category:${category}`:'This is the All Reviews page!'}</h2>
+            <h2>{category ? `Reviews by category: ${category}`:'All Reviews'}</h2>
             <ul>
                 {reviews.map((review)=>{
                     return(
                         <li key={review.review_id}>
                             <div className="all-reviews-list" key={review.review_id}>
-                                <h2 ><Link to ={`/review/${review.review_id}`}className="link">{review.title}  </Link></h2>
-                                <h3>Review Owner: {review.owner}</h3>
-                                <h3>Category: {review.category}</h3>
+                                <h3 ><Link to ={`/review/${review.review_id}`}className="link">{review.title}  </Link></h3>
+                                <h4>Review Owner: {review.owner}</h4>
+                                <h4>Category: {review.category}</h4>
                                 <img className='review_list_img' src={review.review_img_url} alt={review.title} />
                             </div>
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>

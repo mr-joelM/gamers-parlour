@@ -40,7 +40,6 @@ const RevComments = () => {
 
     return (
         <div className="revCom">
-            <h1>This is the Review comments page!</h1>
             <ul>
                 {revComments.map((comment)=>{
                     if(!comment){return null}

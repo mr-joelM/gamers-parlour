@@ -24,13 +24,13 @@ const Categories = () => {
 
     return (
         <div className="categories">
-            <h2>This is the category page!!</h2>
+            <h2>Choose a category</h2>
             <ul>
                 {cats.map((category)=>{
                     return(
                         <li key={category.slug}>
                             <div className='cats_listing' key={category.slug}>
-                                <h2><Link to = {`/reviews/${category.slug}`} className="link">{category.slug}</Link></h2>
+                                <h3><Link to = {`/reviews/${category.slug}`} className="link">{category.slug}</Link></h3>
                                 <h4>"{category.description}"</h4>
                             </div>
                             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
