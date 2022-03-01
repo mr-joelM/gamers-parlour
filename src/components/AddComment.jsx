@@ -32,20 +32,20 @@ const AddComment = () => {
 
     return (
         <div className="addCom">
-            <h3>Leave your comment bellow</h3>
+            <h3>Leave your comment below</h3>
             <h4>(note that for demonstration purpose we will let you use the account of "happyamy2016" to post your new comment)</h4>
             <img className='filigree_img' src={filigree} alt="decorative filigree"/>
             <form onSubmit= {handleSubmit}>
                 <div className="addcom_user">
                     <label htmlFor="addcom_user_input" className="addcom_user_label">Enter your username:</label>
-                    <input id="addcom_user_input" type="text"  required pattern="happyamy2016" required
+                    <input id="addcom_user_input" className='addcom_user_input' type="text"  required pattern="happyamy2016" required
                     value={user} onChange={(event)=> setUser(event.target.value)}></input>
                 </div>
                 <br></br>
                 <div className="addcom_body">
                     <label htmlFor="addcom_body_input" className="addcom_body_label">Write your comment: </label>
                     <br></br>
-                    <textarea id="addcom_body_input" minLength="10" maxLength="150" rows="4" cols="35" required
+                    <textarea id="addcom_body_input" className='addcom_body_input' minLength="10" maxLength="150" rows="4" cols="35" required
                     value={newComment} onChange={(event)=> setNewComment(event.target.value)}></textarea>
                 </div>
                 <br></br>
